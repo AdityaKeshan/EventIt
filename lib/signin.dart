@@ -51,7 +51,7 @@ class _SignInState extends State<SignIn> {
       Data.userData=await pref.then((value) => userDataFromJson(value.getString("User")));
       Data.creator();
       print(Data.events);
-      Navigator.popAndPushNamed(context, "/home");
+      Navigator.pushNamed(context, "/home");
     }
   }
   bool isVitEmail(String a)

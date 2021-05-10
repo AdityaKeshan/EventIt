@@ -1,3 +1,4 @@
+import 'package:eventit/create_event.dart';
 import 'package:eventit/review.dart';
 import 'package:eventit/signin.dart';
 import 'package:eventit/home_page.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/':(context)=>SignIn(),
         '/signup':(context) => SignUp(),
-        '/home':(context) => Profile()
+        '/home':(context) => CreateEvent()
       },
       debugShowCheckedModeBanner: false,
     ) ;
