@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'eventdata.dart';
 import 'user_data.dart';
 import 'package:firebase_database/firebase_database.dart';
 
@@ -22,6 +23,25 @@ class Data
       {
         events.add(y.toString());
       }
+  }
+  Future<List<EventData>> getEvent(String a)async{
+    List<EventData> events=[];
+    firebaseDatabase=FirebaseDatabase.instance;
+    var b=firebaseDatabase.reference().child("Events").orderByChild('keywords');
+    b.once().then((DataSnapshot snapshot)
+    {
+      Map<dynamic,dynamic> m=snapshot.value;
+      for(var b in m.values)
+        {
+          if(b['keywords']==a)
+            {
+              EventData a=new EventData(date:b['date'],description: b['description'],fee: b['fee'],keywords:
+              b['keywords'],time: b['time'],title: b['title'],rating: b['rating']);
+              events.add(a);
+            }
+        }
+    });
+    return events;
   }
   void getUserData(String a) async
   {
