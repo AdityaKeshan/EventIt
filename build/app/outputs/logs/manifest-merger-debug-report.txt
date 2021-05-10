@@ -7,12 +7,15 @@ INJECTED from C:\Flutter\eventit\android\app\src\main\AndroidManifest.xml:1:1-41
 MERGED from C:\Flutter\eventit\android\app\src\main\AndroidManifest.xml:1:1-41:12
 MERGED from [:firebase_auth] C:\Flutter\eventit\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_database] C:\Flutter\eventit\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
+MERGED from [:firebase_storage] C:\Flutter\eventit\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_core] C:\Flutter\eventit\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:shared_preferences] C:\Flutter\eventit\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:fluttertoast] C:\Flutter\eventit\build\fluttertoast\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:path_provider] C:\Flutter\eventit\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:google_sign_in] C:\Flutter\eventit\build\google_sign_in\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-analytics:18.0.3] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\0c39c7f77f8689bf25514717f217710d\jetified-firebase-analytics-18.0.3\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-auth:20.0.4] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\0b720c8f70de3dc832a8f60a86eda763\jetified-firebase-auth-20.0.4\AndroidManifest.xml:17:1-83:12
+MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\4845b39a08f90c7eb82a272b8ff94bfa\jetified-firebase-storage-19.2.2\AndroidManifest.xml:15:1-39:12
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\33727e889abfbac111a0f5b7ec99e089\jetified-firebase-database-19.7.0\AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.android.gms:play-services-measurement-api:18.0.3] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\d45d721fa175bba3faf9b759edbbe69d\jetified-play-services-measurement-api-18.0.3\AndroidManifest.xml:17:1-36:12
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\4848f86472af843329d58b4d12e5b933\jetified-firebase-auth-interop-19.0.2\AndroidManifest.xml:2:1-10:12
@@ -85,12 +88,16 @@ MERGED from [:firebase_auth] C:\Flutter\eventit\build\firebase_auth\intermediate
 MERGED from [:firebase_auth] C:\Flutter\eventit\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_database] C:\Flutter\eventit\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_database] C:\Flutter\eventit\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_storage] C:\Flutter\eventit\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_storage] C:\Flutter\eventit\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_core] C:\Flutter\eventit\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_core] C:\Flutter\eventit\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-13:19
 MERGED from [com.google.firebase:firebase-analytics:18.0.3] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\0c39c7f77f8689bf25514717f217710d\jetified-firebase-analytics-18.0.3\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:18.0.3] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\0c39c7f77f8689bf25514717f217710d\jetified-firebase-analytics-18.0.3\AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-auth:20.0.4] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\0b720c8f70de3dc832a8f60a86eda763\jetified-firebase-auth-20.0.4\AndroidManifest.xml:26:5-81:19
 MERGED from [com.google.firebase:firebase-auth:20.0.4] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\0b720c8f70de3dc832a8f60a86eda763\jetified-firebase-auth-20.0.4\AndroidManifest.xml:26:5-81:19
+MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\4845b39a08f90c7eb82a272b8ff94bfa\jetified-firebase-storage-19.2.2\AndroidManifest.xml:29:5-37:19
+MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\4845b39a08f90c7eb82a272b8ff94bfa\jetified-firebase-storage-19.2.2\AndroidManifest.xml:29:5-37:19
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\33727e889abfbac111a0f5b7ec99e089\jetified-firebase-database-19.7.0\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\33727e889abfbac111a0f5b7ec99e089\jetified-firebase-database-19.7.0\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.android.gms:play-services-measurement-api:18.0.3] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\d45d721fa175bba3faf9b759edbbe69d\jetified-play-services-measurement-api-18.0.3\AndroidManifest.xml:26:5-34:19
@@ -185,18 +192,24 @@ MERGED from [:firebase_auth] C:\Flutter\eventit\build\firebase_auth\intermediate
 MERGED from [:firebase_auth] C:\Flutter\eventit\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_database] C:\Flutter\eventit\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_database] C:\Flutter\eventit\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_storage] C:\Flutter\eventit\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:firebase_storage] C:\Flutter\eventit\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] C:\Flutter\eventit\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] C:\Flutter\eventit\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:shared_preferences] C:\Flutter\eventit\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:shared_preferences] C:\Flutter\eventit\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:fluttertoast] C:\Flutter\eventit\build\fluttertoast\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:fluttertoast] C:\Flutter\eventit\build\fluttertoast\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] C:\Flutter\eventit\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] C:\Flutter\eventit\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:google_sign_in] C:\Flutter\eventit\build\google_sign_in\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:google_sign_in] C:\Flutter\eventit\build\google_sign_in\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:18.0.3] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\0c39c7f77f8689bf25514717f217710d\jetified-firebase-analytics-18.0.3\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:18.0.3] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\0c39c7f77f8689bf25514717f217710d\jetified-firebase-analytics-18.0.3\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth:20.0.4] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\0b720c8f70de3dc832a8f60a86eda763\jetified-firebase-auth-20.0.4\AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-auth:20.0.4] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\0b720c8f70de3dc832a8f60a86eda763\jetified-firebase-auth-20.0.4\AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\4845b39a08f90c7eb82a272b8ff94bfa\jetified-firebase-storage-19.2.2\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\4845b39a08f90c7eb82a272b8ff94bfa\jetified-firebase-storage-19.2.2\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\33727e889abfbac111a0f5b7ec99e089\jetified-firebase-database-19.7.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\33727e889abfbac111a0f5b7ec99e089\jetified-firebase-database-19.7.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.gms:play-services-measurement-api:18.0.3] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\d45d721fa175bba3faf9b759edbbe69d\jetified-play-services-measurement-api-18.0.3\AndroidManifest.xml:20:5-44
@@ -309,6 +322,8 @@ MERGED from [:google_sign_in] C:\Flutter\eventit\build\google_sign_in\intermedia
 MERGED from [:google_sign_in] C:\Flutter\eventit\build\google_sign_in\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-67
 MERGED from [com.google.firebase:firebase-auth:20.0.4] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\0b720c8f70de3dc832a8f60a86eda763\jetified-firebase-auth-20.0.4\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-auth:20.0.4] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\0b720c8f70de3dc832a8f60a86eda763\jetified-firebase-auth-20.0.4\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\4845b39a08f90c7eb82a272b8ff94bfa\jetified-firebase-storage-19.2.2\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\4845b39a08f90c7eb82a272b8ff94bfa\jetified-firebase-storage-19.2.2\AndroidManifest.xml:27:5-67
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\33727e889abfbac111a0f5b7ec99e089\jetified-firebase-database-19.7.0\AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\33727e889abfbac111a0f5b7ec99e089\jetified-firebase-database-19.7.0\AndroidManifest.xml:26:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:18.0.3] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\d45d721fa175bba3faf9b759edbbe69d\jetified-play-services-measurement-api-18.0.3\AndroidManifest.xml:22:5-67
@@ -327,10 +342,14 @@ service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [:firebase_auth] C:\Flutter\eventit\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_database] C:\Flutter\eventit\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_database] C:\Flutter\eventit\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_storage] C:\Flutter\eventit\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_storage] C:\Flutter\eventit\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_core] C:\Flutter\eventit\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
 MERGED from [:firebase_core] C:\Flutter\eventit\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
 MERGED from [com.google.firebase:firebase-auth:20.0.4] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\0b720c8f70de3dc832a8f60a86eda763\jetified-firebase-auth-20.0.4\AndroidManifest.xml:74:9-80:19
 MERGED from [com.google.firebase:firebase-auth:20.0.4] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\0b720c8f70de3dc832a8f60a86eda763\jetified-firebase-auth-20.0.4\AndroidManifest.xml:74:9-80:19
+MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\4845b39a08f90c7eb82a272b8ff94bfa\jetified-firebase-storage-19.2.2\AndroidManifest.xml:30:9-36:19
+MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\4845b39a08f90c7eb82a272b8ff94bfa\jetified-firebase-storage-19.2.2\AndroidManifest.xml:30:9-36:19
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\33727e889abfbac111a0f5b7ec99e089\jetified-firebase-database-19.7.0\AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\33727e889abfbac111a0f5b7ec99e089\jetified-firebase-database-19.7.0\AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.android.gms:play-services-measurement-api:18.0.3] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\d45d721fa175bba3faf9b759edbbe69d\jetified-play-services-measurement-api-18.0.3\AndroidManifest.xml:27:9-33:19
@@ -359,6 +378,12 @@ ADDED from [:firebase_database] C:\Flutter\eventit\build\firebase_database\inter
 		ADDED from [:firebase_database] C:\Flutter\eventit\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
 	android:name
 		ADDED from [:firebase_database] C:\Flutter\eventit\build\firebase_database\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-127
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_storage] C:\Flutter\eventit\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_storage] C:\Flutter\eventit\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_storage] C:\Flutter\eventit\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-126
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
 ADDED from [:firebase_core] C:\Flutter\eventit\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
 	android:value
@@ -367,6 +392,8 @@ ADDED from [:firebase_core] C:\Flutter\eventit\build\firebase_core\intermediates
 		ADDED from [:firebase_core] C:\Flutter\eventit\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-auth:20.0.4] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\0b720c8f70de3dc832a8f60a86eda763\jetified-firebase-auth-20.0.4\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\4845b39a08f90c7eb82a272b8ff94bfa\jetified-firebase-storage-19.2.2\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\4845b39a08f90c7eb82a272b8ff94bfa\jetified-firebase-storage-19.2.2\AndroidManifest.xml:26:5-79
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\33727e889abfbac111a0f5b7ec99e089\jetified-firebase-database-19.7.0\AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\33727e889abfbac111a0f5b7ec99e089\jetified-firebase-database-19.7.0\AndroidManifest.xml:25:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:18.0.3] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\d45d721fa175bba3faf9b759edbbe69d\jetified-play-services-measurement-api-18.0.3\AndroidManifest.xml:23:5-79
@@ -449,6 +476,12 @@ ADDED from [com.google.firebase:firebase-auth:20.0.4] C:\Users\suman\.gradle\cac
 		ADDED from [com.google.firebase:firebase-auth:20.0.4] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\0b720c8f70de3dc832a8f60a86eda763\jetified-firebase-auth-20.0.4\AndroidManifest.xml:79:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:20.0.4] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\0b720c8f70de3dc832a8f60a86eda763\jetified-firebase-auth-20.0.4\AndroidManifest.xml:78:17-109
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\4845b39a08f90c7eb82a272b8ff94bfa\jetified-firebase-storage-19.2.2\AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\4845b39a08f90c7eb82a272b8ff94bfa\jetified-firebase-storage-19.2.2\AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:19.2.2] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\4845b39a08f90c7eb82a272b8ff94bfa\jetified-firebase-storage-19.2.2\AndroidManifest.xml:34:17-107
 meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
 ADDED from [com.google.firebase:firebase-database:19.7.0] C:\Users\suman\.gradle\caches\transforms-2\files-2.1\33727e889abfbac111a0f5b7ec99e089\jetified-firebase-database-19.7.0\AndroidManifest.xml:32:13-34:85
 	android:value

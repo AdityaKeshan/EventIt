@@ -14,6 +14,15 @@ class Data
   {
     print(userData.toJson());
   }
+  static void creator()
+  {
+    String k=userData.events;
+    var z=k.split(" | ");
+    for(var y in z)
+      {
+        events.add(y.toString());
+      }
+  }
   void getUserData(String a) async
   {
     firebaseDatabase=FirebaseDatabase.instance;
@@ -30,16 +39,14 @@ class Data
               phone: b['phone'].toString(),reg: b['reg'].toString());
               print(userData.toJson());
               print("Found");
-              pref.then((value) => value.setString("User", userData.toJson().toString()));
+              
+              pref.then((value) => value.setString("User", jsonEncode(userData)));
               String k=b['events'];
-              int i=k.indexOf("|");
-              int prev=0;
-              while(i!=-1)
-                {
-                  events.add(k.substring(prev,i));
-                  prev=i+1;
-                  i=k.indexOf("|");
-                }
+              var z=k.split(" | ");
+              for(var y in z)
+              {
+                events.add(y.toString());
+              }
               break;
             }
         }

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'data.dart';
 import 'signin.dart';
+
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -33,7 +35,7 @@ class _ProfileState extends State<Profile> {
       ),
       margin: EdgeInsets.symmetric(horizontal: 10.0),
       child: Text(
-        a[i],style: TextStyle(
+        Data.events[i],style: TextStyle(
         fontSize: 20.0
       ),
       ),
@@ -127,9 +129,12 @@ class _ProfileState extends State<Profile> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             GestureDetector(
-              onTap:() {
+              onTap:() async {
                 Fluttertoast.showToast(msg: "Signed Out");
                 firebaseAuthentication.signOut();
+                
+                SharedPreferences.getInstance().then((value) => value.clear());
+                Navigator.popAndPushNamed(context, "/");
               },
               child: Padding(
                 padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 10.0),
@@ -167,7 +172,7 @@ class _ProfileState extends State<Profile> {
               padding: EdgeInsets.symmetric(horizontal: 20.0),
             ),
             Expanded(
-              child: ListView.builder(itemCount:a.length,itemBuilder: (BuildContext context, int index) {
+              child: ListView.builder(itemCount:Data.events.length,itemBuilder: (BuildContext context, int index) {
                 return listViewElement(index);
               },
 

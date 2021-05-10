@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -9,6 +10,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'data.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
+import 'package:path_provider/path_provider.dart';
 
 import 'user_data.dart';
 
@@ -33,6 +36,8 @@ class _SignInState extends State<SignIn> {
     firebase=await getFirebase();
 
     firebaseAuthentication=FirebaseAuth.instance;
+    firebase_storage.FirebaseStorage storage =
+        firebase_storage.FirebaseStorage.instance;
     bool a=false;
     try {
       a = await pref.then((value) => value.getBool("Logged"));
@@ -44,6 +49,8 @@ class _SignInState extends State<SignIn> {
     if(a)
     {
       Data.userData=await pref.then((value) => userDataFromJson(value.getString("User")));
+      Data.creator();
+      print(Data.events);
       Navigator.popAndPushNamed(context, "/home");
     }
   }
