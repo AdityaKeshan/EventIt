@@ -14,7 +14,7 @@ class EventDetailsBackground extends StatelessWidget {
       child: ClipPath(
         clipper: ImageClipper(),
         child: Image.asset(
-          event.imagePath,
+          "assets/event_images/music_concert.jpeg",
           fit: BoxFit.cover,
           width: screenWidth,
           color: Color(0x99000000),

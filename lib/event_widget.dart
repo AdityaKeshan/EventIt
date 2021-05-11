@@ -26,7 +26,7 @@ class EventWidget extends StatelessWidget {
                 Radius.circular(30),
               ),
               child: Image.asset(
-                event.imagePath,
+               "assets/event_images/music_concert.jpeg",
                 height: 150,
                 fit: BoxFit.fitWidth,
               ),
@@ -55,7 +55,7 @@ class EventWidget extends StatelessWidget {
                                 width: 5,
                               ),
                               Text(
-                                event.location,
+                                event.location==null?"VIT":event.location,
                                 style: eventLocationTextStyle,
                               ),
                             ],

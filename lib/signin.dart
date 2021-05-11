@@ -39,8 +39,10 @@ class _SignInState extends State<SignIn> {
     firebase_storage.FirebaseStorage storage =
         firebase_storage.FirebaseStorage.instance;
     bool a=false;
+    bool b=false;
     try {
       a = await pref.then((value) => value.getBool("Logged"));
+      b = await pref.then((value) => value.getBool("Admin"));
     }
     catch(e)
     {
@@ -48,11 +50,31 @@ class _SignInState extends State<SignIn> {
     }
     if(a)
     {
-      Data.userData=await pref.then((value) => userDataFromJson(value.getString("User")));
-      Data.creator();
+      //TODO check this for Admins
+
+
       await Data().getNews();
       print(Data.events);
-      Navigator.pushNamed(context, "/home");
+      if(b)
+      {
+        Data.adminData=await pref.then((value) => userDataFromJson(value.getString("User")));
+        Data().reInitAdminEvents();
+        Data.adminNo=await pref.then((value) => value.getString("UserId"));
+        Timer(Duration(seconds: 5), ()
+        {
+          Navigator.pushNamed(context, "/homeadmin");
+        });
+
+      }
+      else
+      {
+        Data.userData=await pref.then((value) => userDataFromJson(value.getString("User")));
+        Data.creator();
+        Timer(Duration(seconds: 3), ()
+        {
+          Navigator.pushNamed(context, "/home");
+        });
+      }
     }
   }
   bool isVitEmail(String a)
@@ -178,18 +200,49 @@ class _SignInState extends State<SignIn> {
                         try{
                           UserCredential ab= await firebaseAuthentication.signInWithEmailAndPassword(email: email, password: password);
                           print("Success");
-                          if(ab.user.emailVerified)
+                          if(true)
                           {
-                                await Data().getUserData(email);
+
                                  await Data().getNews();
-                                setState(() {
+                                 if(email=='samarth.agarwal2019@vitstudent.ac.in')
+                                 {
+                                   await Data().getAdminData("samarth.agarwal2019@vitstudent.ac.in");
+                                   setState(() {
+                                     pref.then((value) => {
+                                       value.setBool('Admin', true)
+                                     });
+                                   });
+
+
+                                 }
+                                 else
+                                 {
+                                   await Data().getUserData(email);
+                                   setState(() {
+                                     pref.then((value) => {
+                                       value.setBool('Admin', false)
+                                     });
+                                   });
+
+                                 }
+                                setState(()
+                                {
+
                                   pref.then((value) => {
                                     value.setBool('Logged', true)
                                   });
                                 });
                                 Timer(Duration(seconds: 4), ()
                                 {
+                                if(email=='samarth.agarwal2019@vitstudent.ac.in')
+                                {
+                                  Navigator.popAndPushNamed(context, '/homeadmin');
+                                }
+                                else{
                                   Navigator.popAndPushNamed(context, '/home');
+                                }
+
+
                                 });
 
                           }

@@ -3,15 +3,19 @@ import 'dart:convert';
 import 'eventdata.dart';
 import 'event.dart' as e;
 import 'user_data.dart';
+import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 class Data
 {
-  static UserData userData;
+  static UserData userData,adminData;
   static FirebaseDatabase firebaseDatabase;
   Future<SharedPreferences> pref=SharedPreferences.getInstance();
   static Map<dynamic,dynamic> news;
+  static bool isAdmin=false;
+  static List<e.Event> adminEvents=[];
+  static var adminNo;
   static List<String> events=[];
   static List<e.Event> newsData=[];
   Future<void> getNews() async
@@ -57,13 +61,83 @@ class Data
         {
           if(b['keywords']==a)
             {
-              EventData a=new EventData(date:b['date'],description: b['description'],fee: b['fee'],keywords:
+              EventData a1=new EventData(date:b['date'],description: b['description'],fee: b['fee'],keywords:
               b['keywords'],time: b['time'],title: b['title'],rating: b['rating']);
-              events.add(a);
+              events.add(a1);
             }
         }
     });
     return events;
+  }
+  void reInitAdminEvents() async
+  {
+    String k=adminData.events;
+    print(k);
+    List<String> z=k.split(",");
+    for(String y in z)
+    {
+      await getEventById(y);
+    }
+    print(adminEvents.toString());
+  }
+  Future<void> getEventById(String a)async{
+    e.Event c;
+    firebaseDatabase=FirebaseDatabase.instance;
+    var b=firebaseDatabase.reference().child("Events/");
+    b.once().then((DataSnapshot snapshot)
+    {
+      Map<dynamic,dynamic> m=snapshot.value;
+      print("ABCD");
+      print(m);
+      for(var b in m.keys)
+      {
+
+        if(b==a)
+        {
+          var k=m[b];
+          print("Found Event");
+          // TODO:Add Comments in event details
+          c=new e.Event(title: k['title'],description: k['description'],date: k['date'],fees: k['fees'],rating: k['rating'],duration: k['time'],
+          comments: k['comments']);
+          print(c);
+          adminEvents.add(c);
+          break;
+        }
+      }
+    });
+  }
+  void getAdminData(String a) async
+  {
+    firebaseDatabase=FirebaseDatabase.instance;
+    var b=firebaseDatabase.reference().child("Admins").orderByChild('email');
+    b.once().then((DataSnapshot snapshot)  async {
+      Map < dynamic, dynamic > m=snapshot.value;
+      print(m);
+      for(var c in m.keys)
+      {
+        print("2");
+        var b=m[c];
+        if(b['email']==a)
+        {
+          adminNo=c;
+          pref.then((value) => value.setString("UserId", adminNo.toString()));
+          adminData=new UserData(email: a,events: b['events'].toString(),name: b['name'].toString(),password: b['password'].toString(),
+              phone: b['phone'].toString(),reg: b['reg'].toString());
+          print("Found");
+
+          pref.then((value) => value.setString("User", jsonEncode(adminData)));
+          String k=b['events'];
+          print(k);
+          List<String> z=k.split(",");
+          for(String y in z)
+          {
+            await getEventById(y);
+
+          }
+          break;
+        }
+      }
+    });
   }
   void getUserData(String a) async
   {

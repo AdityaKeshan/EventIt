@@ -49,7 +49,7 @@ class EventDetailsContent extends StatelessWidget {
                     width: 5,
                   ),
                   Text(
-                    event.location,
+                    event.location==null?"VIT":event.location,
                     style: eventLocationTextStyle.copyWith(
                         color: Colors.white, fontWeight: FontWeight.w700),
                   ),

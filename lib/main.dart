@@ -1,5 +1,8 @@
+import 'package:eventit/adminprofile.dart';
 import 'package:eventit/create_event.dart';
+import 'package:eventit/homepageadmin.dart';
 import 'package:eventit/news.dart';
+import 'package:eventit/newsAdmin.dart';
 import 'package:eventit/review.dart';
 import 'package:eventit/signin.dart';
 import 'package:eventit/home_page.dart';
@@ -26,6 +29,9 @@ class MyApp extends StatelessWidget {
         '/profile':(context) => Profile(),
         '/review':(context) => Review(),
         '/news':(context)=>NewsPage(),
+        '/homeadmin':(context)=>HomePageAdmin(),
+        '/newsadmin':(context)=>NewsPageAdmin(),
+        '/profileAdmin':(context)=>ProfileAdmin(),
       },
       debugShowCheckedModeBanner: false,
     ) ;

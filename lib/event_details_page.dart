@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'data.dart';
 import 'event.dart';
 import 'event_details_background.dart';
 import 'event_details_content.dart';
@@ -25,7 +26,7 @@ class EventDetailsPage extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton.extended(
+      floatingActionButton: Data.adminData!=null?null: FloatingActionButton.extended(
         onPressed: () {
           // Add your onPressed code here!
           showDialog<void>(

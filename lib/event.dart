@@ -10,7 +10,7 @@ class Event {
       punchLine1,
       punchLine2,
       fees,
-      date;
+      date,comments;
   final List categoryIds, galleryImages;
   String rating;
   ListView list;
@@ -28,7 +28,7 @@ class Event {
       this.fees,
       this.date,
       this.rating,
-      this.list});
+      this.list,this.comments});
 }
 
 final techEvent = Event(
@@ -43,6 +43,7 @@ final techEvent = Event(
     fees: "Rs. 150",
     date: "19-06-2000",
     rating: "4.5/5",
+    comments: "",
     list: ListView(
       // padding: const EdgeInsets.all(8),
       children: <Widget>[

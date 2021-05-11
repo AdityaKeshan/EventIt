@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'data.dart';
 import 'home_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -20,7 +21,7 @@ class CreateEvent extends StatefulWidget {
 }
 
 class _CreateEventState extends State<CreateEvent> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 1;
   String title, description, date = "Date", time = "Time", fee, keywords;
   FirebaseAuth firebaseAuth;
   FirebaseDatabase database;
@@ -78,6 +79,21 @@ class _CreateEventState extends State<CreateEvent> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      if(index==3) {
+        Navigator.popAndPushNamed(context,'/profileAdmin');
+      }
+      else if(index==0)
+      {
+        Navigator.popAndPushNamed(context,'/homeadmin');
+      }
+      else if(index==1)
+      {
+
+      }
+      else
+      {
+        Navigator.popAndPushNamed(context,'/newsadmin');
+      }
     });
   }
 
@@ -355,7 +371,12 @@ class _CreateEventState extends State<CreateEvent> {
                         'comments': "",
                         'rating': "4.5"
                       };
-                      database.reference().child("/Events/$eventID").set(val);
+                      database.reference().child("Events/$eventID").set(val);
+                      var kk=database.reference().child("/Admins/"+Data.adminNo.toString()+"/events");
+                      kk.once().then((DataSnapshot value) {
+                        String ff=value.value.toString();
+                        kk.set(ff+","+eventID.toString());
+                      });
                       FirebaseStorage storage = FirebaseStorage.instance;
                       try {
                         await storage.ref("images/$eventID/cover.png").putFile(_image);
