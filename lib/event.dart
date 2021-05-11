@@ -14,7 +14,7 @@ class Event {
   final List categoryIds, galleryImages;
   String rating;
   ListView list;
-
+  List<String> commentsList=[];
   Event(
       {this.imagePath,
       this.title,

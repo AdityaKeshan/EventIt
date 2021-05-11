@@ -35,7 +35,7 @@ class _ProfileState extends State<Profile> {
       }
       else if(index==1)
       {
-
+        Navigator.popAndPushNamed(context,'/search');
       }
       else
       {

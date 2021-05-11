@@ -5,12 +5,26 @@ import 'event.dart';
 import 'guest.dart';
 import 'styleguide.dart';
 
-class EventDetailsContent extends StatelessWidget {
+class EventDetailsContent extends StatefulWidget {
+
+  @override
+  _EventDetailsContentState createState() => _EventDetailsContentState();
+}
+
+class _EventDetailsContentState extends State<EventDetailsContent> {
+  var event,screenWidth;
+  List<String> comm;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+  }
   @override
   Widget build(BuildContext context) {
-    final event = Provider.of<Event>(context);
-    final screenWidth = MediaQuery.of(context).size.width;
-
+    event = Provider.of<Event>(context,listen: false);
+    screenWidth = MediaQuery.of(context).size.width;
+    comm=event.comments.split("|");
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,32 +74,7 @@ class EventDetailsContent extends StatelessWidget {
           SizedBox(
             height: 180,
           ),
-          // Padding(
-          //   padding: const EdgeInsets.only(left: 16.0),
-          //   child: Text(
-          //     "GUESTS",
-          //     style: guestTextStyle,
-          //   ),
-          // ),
-          // SingleChildScrollView(
-          //   scrollDirection: Axis.horizontal,
-          //   child: Row(
-          //     children: <Widget>[
-          //       for (final guest in guests)
-          //         Padding(
-          //           padding: const EdgeInsets.all(8),
-          //           child: ClipOval(
-          //             child: Image.asset(
-          //               guest.imagePath,
-          //               width: 90,
-          //               height: 90,
-          //               fit: BoxFit.cover,
-          //             ),
-          //           ),
-          //         ),
-          //     ],
-          //   ),
-          // ),
+
 
           Padding(
             padding: const EdgeInsets.all(16),
@@ -151,10 +140,35 @@ class EventDetailsContent extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            height: 300,
-            child: event.list,
+          Container(
+            height: 900.0,
+            child: ListView.builder(itemCount: comm.length,itemBuilder: (BuildContext context, int index) {
+              return Container(
+                padding: EdgeInsets.only(top: 15.0, left: 20.0, bottom: 10.0),
+                margin: EdgeInsets.only(left: 10, right: 10),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  border: Border.all(
+                    color: Colors.black,
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(0)),
+                ),
+                height: 50,
+                // color: Colors.white,
+
+                child: Text(
+                  comm[index],
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              );
+            },
+
+            ),
           )
+
         ],
       ),
     );

@@ -39,7 +39,7 @@ class _NewsPageState extends State<NewsPage> {
       }
       else if(index==1)
       {
-
+        Navigator.popAndPushNamed(context,'/search');
       }
       else
       {

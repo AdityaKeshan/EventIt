@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
         }
       else if(index==1)
         {
-
+          Navigator.popAndPushNamed(context,'/search');
         }
       else
         {
