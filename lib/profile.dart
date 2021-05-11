@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'data.dart';
+import 'review.dart';
 import 'signin.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
@@ -29,18 +30,24 @@ class _ProfileState extends State<Profile> {
   }
   Widget listViewElement(int i)
   {
-    return Container(
-      decoration: BoxDecoration(
-        border: Border(bottom: BorderSide(width: 1.0,color: Color(0XFF000000)) ) ,
-      ),
-      margin: EdgeInsets.symmetric(horizontal: 10.0),
-      child: Text(
-        Data.events[i],style: TextStyle(
-        fontSize: 20.0
-      ),
-      ),
-      height: 40.0,
+    return GestureDetector(
+      onTap: ()
+      {
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> Review(title: a[i],)));
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border(bottom: BorderSide(width: 1.0,color: Color(0XFF000000)) ) ,
+        ),
+        margin: EdgeInsets.symmetric(horizontal: 10.0),
+        child: Text(
+          Data.events[i],style: TextStyle(
+          fontSize: 20.0
+        ),
+        ),
+        height: 40.0,
 
+      ),
     );
   }
   Widget container(String a, String b) {
@@ -171,6 +178,7 @@ class _ProfileState extends State<Profile> {
               ),
               padding: EdgeInsets.symmetric(horizontal: 20.0),
             ),
+            SizedBox(height:10.0),
             Expanded(
               child: ListView.builder(itemCount:Data.events.length,itemBuilder: (BuildContext context, int index) {
                 return listViewElement(index);

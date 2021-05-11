@@ -24,6 +24,7 @@ class Data
         events.add(y.toString());
       }
   }
+
   Future<List<EventData>> getEvent(String a)async{
     List<EventData> events=[];
     firebaseDatabase=FirebaseDatabase.instance;
@@ -73,3 +74,14 @@ class Data
     });
   }
 }
+//Code for uplaoding images
+// FirebaseStorage storage=FirebaseStorage.instance;
+// try {
+// await storage.ref("images/file.png").putFile(f[0]);
+// String k=await storage.ref("images/file.png").getDownloadURL();
+// print(k);
+// }
+// on FirebaseException catch (e) {
+// // e.g, e.code == 'canceled'
+// print("Error");
+// }

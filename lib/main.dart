@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/':(context)=>SignIn(),
         '/signup':(context) => SignUp(),
-        '/home':(context) => CreateEvent()
+        '/home':(context) => Profile(),
+        '/review':(context) => Review(),
       },
       debugShowCheckedModeBanner: false,
     ) ;
