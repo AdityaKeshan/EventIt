@@ -110,7 +110,7 @@ class EventDetailsContent extends StatelessWidget {
                 style: eventLocationTextStyle,
               ),
             ),
-          if (event.galleryImages.isNotEmpty)
+          if (event.galleryImages!=null && event.galleryImages.isNotEmpty)
             Padding(
               padding: const EdgeInsets.only(left: 16.0, top: 16, bottom: 16),
               child: Text(
@@ -122,6 +122,7 @@ class EventDetailsContent extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: <Widget>[
+                if(event.galleryImages!=null)
                 for (final galleryImagePath in event.galleryImages)
                   Container(
                     margin:

@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'eventdata.dart';
+import 'event.dart' as e;
 import 'user_data.dart';
 import 'package:firebase_database/firebase_database.dart';
 
@@ -8,9 +9,29 @@ import 'package:shared_preferences/shared_preferences.dart';
 class Data
 {
   static UserData userData;
-  FirebaseDatabase firebaseDatabase;
+  static FirebaseDatabase firebaseDatabase;
   Future<SharedPreferences> pref=SharedPreferences.getInstance();
+  static Map<dynamic,dynamic> news;
   static List<String> events=[];
+  static List<e.Event> newsData=[];
+  Future<void> getNews() async
+  {
+    events.clear();
+    firebaseDatabase=FirebaseDatabase.instance;
+    var b=firebaseDatabase.reference().child("News");
+    await b.once().then((DataSnapshot val){
+      news=val.value;
+      for(var k in news.keys)
+      {
+
+        var k1=news[k];
+        print(k1);
+        e.Event a1=new e.Event(imagePath:"assets/event_images/VITEEE.jpg",title: k1['title'],location: k1['location'],description: k1['detail'],punchLine1: k1['total']);
+        newsData.add(a1);
+      }
+    });
+
+  }
   static void display()
   {
     print(userData.toJson());

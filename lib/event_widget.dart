@@ -80,7 +80,7 @@ class EventWidget extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          event.duration.toUpperCase(),
+                          event.duration==null?"":event.duration.toUpperCase(),
                           textAlign: TextAlign.right,
                           style: eventLocationTextStyle.copyWith(
                             fontWeight: FontWeight.w900,
@@ -96,7 +96,7 @@ class EventWidget extends StatelessWidget {
                                 width: 5,
                               ),
                               Text(
-                                event.fees,
+                                event.fees==null?"":event.fees,
                                 style: eventLocationTextStyle.copyWith(
                                   fontWeight: FontWeight.w900,
                                 ),
@@ -113,7 +113,7 @@ class EventWidget extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          event.date,
+                          event.date==null?"":event.date,
                           textAlign: TextAlign.right,
                           style: eventLocationTextStyle.copyWith(
                             fontWeight: FontWeight.w900,
@@ -130,9 +130,9 @@ class EventWidget extends StatelessWidget {
                               ),
                               Row(
                                 children: [
-                                  Icon(Icons.star),
+                                  event.rating==null? SizedBox():Icon(Icons.star),
                                   Text(
-                                    event.rating,
+                                    event.rating==null?"":event.rating,
                                     style: eventLocationTextStyle.copyWith(
                                       fontWeight: FontWeight.w900,
                                     ),

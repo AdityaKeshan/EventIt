@@ -36,7 +36,7 @@ final TextStyle eventWhiteTitleTextStyle = TextStyle(
 
 final TextStyle eventLocationTextStyle = TextStyle(
   fontSize: 20.0,
-  color: Colors.white,
+  color: Colors.black,
 );
 
 final TextStyle guestTextStyle = TextStyle(

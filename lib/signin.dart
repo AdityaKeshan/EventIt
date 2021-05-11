@@ -50,6 +50,7 @@ class _SignInState extends State<SignIn> {
     {
       Data.userData=await pref.then((value) => userDataFromJson(value.getString("User")));
       Data.creator();
+      await Data().getNews();
       print(Data.events);
       Navigator.pushNamed(context, "/home");
     }
@@ -180,6 +181,7 @@ class _SignInState extends State<SignIn> {
                           if(ab.user.emailVerified)
                           {
                                 await Data().getUserData(email);
+                                 await Data().getNews();
                                 setState(() {
                                   pref.then((value) => {
                                     value.setBool('Logged', true)

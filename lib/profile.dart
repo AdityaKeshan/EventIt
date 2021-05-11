@@ -26,6 +26,21 @@ class _ProfileState extends State<Profile> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      if(index==3) {
+
+      }
+      else if(index==0)
+      {
+        Navigator.popAndPushNamed(context,'/home');
+      }
+      else if(index==1)
+      {
+
+      }
+      else
+      {
+        Navigator.popAndPushNamed(context,'/news');
+      }
     });
   }
   Widget listViewElement(int i)

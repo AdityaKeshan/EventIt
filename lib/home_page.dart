@@ -28,6 +28,21 @@ class _HomePageState extends State<HomePage> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      if(index==3) {
+        Navigator.popAndPushNamed(context,'/profile');
+      }
+      else if(index==0)
+        {
+
+        }
+      else if(index==1)
+        {
+
+        }
+      else
+        {
+          Navigator.popAndPushNamed(context,'/news');
+        }
     });
   }
 
