@@ -99,7 +99,7 @@ class EventWidget extends StatelessWidget {
                                 width: 5,
                               ),
                               Text(
-                                event.fees==null?"":event.fees,
+                                "₹"+(event.fees==null?"":event.fees),
                                 style: eventLocationTextStyle.copyWith(
                                   fontWeight: FontWeight.w900,
                                 ),
