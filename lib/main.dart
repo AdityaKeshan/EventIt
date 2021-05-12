@@ -4,6 +4,7 @@ import 'package:eventit/homepageadmin.dart';
 import 'package:eventit/news.dart';
 import 'package:eventit/newsAdmin.dart';
 import 'package:eventit/review.dart';
+import 'package:eventit/search.dart';
 import 'package:eventit/signin.dart';
 import 'package:eventit/home_page.dart';
 import 'package:flutter/material.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         '/profile':(context) => Profile(),
         '/review':(context) => Review(),
         '/news':(context)=>NewsPage(),
+        '/search':(context)=>SearchPage(),
         '/homeadmin':(context)=>HomePageAdmin(),
         '/newsadmin':(context)=>NewsPageAdmin(),
         '/profileAdmin':(context)=>ProfileAdmin(),

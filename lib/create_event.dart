@@ -361,17 +361,8 @@ class _CreateEventState extends State<CreateEvent> {
                     //TODO: Store event info into Realtime Database
                     try {
                       int eventID = Random().nextInt(10000);
-                      Map<String, String> val = {
-                        'title': title,
-                        'description': description,
-                        'date': date,
-                        'time': time,
-                        'fee': fee,
-                        'keywords': keywords,
-                        'comments': "",
-                        'rating': "4.5"
-                      };
-                      database.reference().child("Events/$eventID").set(val);
+
+
                       var kk=database.reference().child("/Admins/"+Data.adminNo.toString()+"/events");
                       kk.once().then((DataSnapshot value) {
                         String ff=value.value.toString();
@@ -380,6 +371,19 @@ class _CreateEventState extends State<CreateEvent> {
                       FirebaseStorage storage = FirebaseStorage.instance;
                       try {
                         await storage.ref("images/$eventID/cover.png").putFile(_image);
+                        String coverLink=await storage.ref("images/$eventID/cover.png").getDownloadURL();
+                        Map<String, String> val = {
+                          'title': title,
+                          'description': description,
+                          'date': date,
+                          'time': time,
+                          'fee': fee,
+                          'keywords': keywords,
+                          'comments': "",
+                          'rating': "4.5",
+                          'coverUrl':coverLink
+                        };
+                        database.reference().child("Events/$eventID").set(val);
                         Fluttertoast.showToast(msg: "Event Creation successful");
                       } on FirebaseException catch (e) {
 // e.g, e.code == 'canceled'

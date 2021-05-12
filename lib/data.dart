@@ -18,6 +18,22 @@ class Data
   static var adminNo;
   static List<String> events=[];
   static List<e.Event> newsData=[];
+  static List<e.Event> userEvents=[];
+  Future<void> getEvents()async
+  {
+    var b=firebaseDatabase.reference().child("Events");
+    await b.once().then((DataSnapshot val) {
+      Map<dynamic,dynamic> m=val.value;
+      for(var a in m.keys)
+        {
+          var k=m[a];
+          e.Event c=new e.Event(title: k['title'],description: k['description'],date: k['date'],fees: k['fees'],rating: k['rating'],duration: k['time'],
+              comments: k['comments'],coverUrl: k['coverUrl']);
+          userEvents.add(c);
+        }
+    });
+
+  }
   Future<void> getNews() async
   {
     events.clear();
@@ -50,8 +66,8 @@ class Data
       }
   }
 
-  Future<List<EventData>> getEvent(String a)async{
-    List<EventData> events=[];
+  Future<List<e.Event>> getEvent(String a)async{
+    List<e.Event> events=[];
     firebaseDatabase=FirebaseDatabase.instance;
     var b=firebaseDatabase.reference().child("Events").orderByChild('keywords');
     b.once().then((DataSnapshot snapshot)
@@ -61,8 +77,7 @@ class Data
         {
           if(b['keywords']==a)
             {
-              EventData a1=new EventData(date:b['date'],description: b['description'],fee: b['fee'],keywords:
-              b['keywords'],time: b['time'],title: b['title'],rating: b['rating']);
+              e.Event a1=new e.Event(coverUrl:b['coverUrl'],date:b['date'],description: b['description'],fees: b['fee'],duration: b['time'],title: b['title'],rating: b['rating'],comments: b['comments']);
               events.add(a1);
             }
         }
@@ -97,7 +112,7 @@ class Data
           var k=m[b];
           print("Found Event");
           // TODO:Add Comments in event details
-          c=new e.Event(title: k['title'],description: k['description'],date: k['date'],fees: k['fees'],rating: k['rating'],duration: k['time'],
+          c=new e.Event(coverUrl:k['coverUrl'],title: k['title'],description: k['description'],date: k['date'],fees: k['fees'],rating: k['rating'],duration: k['time'],
           comments: k['comments']);
           print(c);
           adminEvents.add(c);

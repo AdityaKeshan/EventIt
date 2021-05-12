@@ -25,8 +25,11 @@ class EventWidget extends StatelessWidget {
               borderRadius: BorderRadius.all(
                 Radius.circular(30),
               ),
-              child: Image.asset(
+              child: event.coverUrl==null? Image.asset(
                "assets/event_images/music_concert.jpeg",
+                height: 150,
+                fit: BoxFit.fitWidth,
+              ):Image.network(event.coverUrl,
                 height: 150,
                 fit: BoxFit.fitWidth,
               ),

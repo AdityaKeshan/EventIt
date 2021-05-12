@@ -10,7 +10,8 @@ class Event {
       punchLine1,
       punchLine2,
       fees,
-      date,comments;
+      date,comments,
+  coverUrl;
   final List categoryIds, galleryImages;
   String rating;
   ListView list;
@@ -28,6 +29,7 @@ class Event {
       this.fees,
       this.date,
       this.rating,
+        this.coverUrl,
       this.list,this.comments});
 }
 

@@ -13,14 +13,18 @@ class EventDetailsBackground extends StatelessWidget {
       alignment: Alignment.topCenter,
       child: ClipPath(
         clipper: ImageClipper(),
-        child: Image.asset(
+        child: event.coverUrl==null?Image.asset(
           "assets/event_images/music_concert.jpeg",
           fit: BoxFit.cover,
           width: screenWidth,
           color: Color(0x99000000),
           colorBlendMode: BlendMode.darken,
           height: screenHeight * 0.5,
-        ),
+        ):Image.network(event.coverUrl,fit: BoxFit.cover,
+          width: screenWidth,
+          color: Color(0x99000000),
+          colorBlendMode: BlendMode.darken,
+          height: screenHeight * 0.5,),
       ),
     );
   }

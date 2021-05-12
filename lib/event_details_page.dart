@@ -37,7 +37,7 @@ class EventDetailsPage extends StatelessWidget {
                     title: Text(
                         'Confirm Registration'), // To display the title it is optional
                     content: Text(
-                        'Hi Aditya, do you want to register for AI event for Rs. 150?'), // Message which will be pop up on the screen
+                        'Hi Aditya, do you want to register for '+event.title+' event for Rs. '+event.fees+'?'), // Message which will be pop up on the screen
                     // Action widget which will provide the user to acknowledge the choice
                     actions: [
                       FlatButton(
@@ -49,7 +49,9 @@ class EventDetailsPage extends StatelessWidget {
                       ),
                       FlatButton(
                         textColor: Colors.black,
-                        onPressed: () {},
+                        onPressed: () {
+                          //TODO: Add Database mechanism to update into events as well as our user's event list both online and offline
+                        },
                         child: Text('YES'),
                       ),
                     ],

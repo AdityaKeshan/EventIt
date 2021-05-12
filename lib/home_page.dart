@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'create_event.dart';
 import 'category.dart';
+import 'data.dart';
 import 'event.dart';
 import 'styleguide.dart';
 import 'event_details_page.dart';
@@ -102,27 +103,19 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                      child: Consumer<AppState>(
-                        builder: (context, appState, _) => Column(
-                          children: <Widget>[
-                            for (final event in events.where((e) => e
-                                .categoryIds
-                                .contains(appState.selectedCategoryId)))
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          EventDetailsPage(event: event),
-                                    ),
-                                  );
-                                },
-                                child: EventWidget(
-                                  event: event,
-                                ),
-                              )
-                          ],
-                        ),
+                      child: Container(
+                        height: 500.0,
+                        child: ListView.builder(itemCount:Data.userEvents.length,itemBuilder: (BuildContext context,index){
+
+                          return GestureDetector(onTap:(){
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    EventDetailsPage(event: Data.userEvents[index]),
+                              ),
+                            );
+                          },child: EventWidget(event: Data.userEvents[index],));
+                        }),
                       ),
                     ),
                   ],
