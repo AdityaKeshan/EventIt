@@ -41,32 +41,40 @@ class Data {
   }
   Future<void> urls(String a) async
   {
-    var b=getEventId(a);
+    var b=await getEventId(a);
+    print(b);
     List<String> url=[];
     FirebaseStorage storage=FirebaseStorage.instance;
     var c=await storage.ref("images/"+b.toString());
   c.listAll().then((value) async {
     var d=value.items;
+    print(d);
     for(var e in d)
       {
         url.add(await e.getDownloadURL());
+        print(await e.getDownloadURL());
       }
   }
     );
   uRLS=url;
+    print('Here to got images');
   }
   Future<dynamic> getEventId(String ab) async {
+    var ans;
     var b = firebaseDatabase.reference().child("Events");
     await b.once().then((DataSnapshot val) {
       Map<dynamic, dynamic> m = val.value;
+      print(val.value);
       for (var a in m.keys) {
         var k = m[a];
-        if (k['title'] == ab) {
-          return a;
+        print(ab);
+        if (k['title'].toString() == ab) {
+          print("Found ID");
+          ans=a;
         }
       }
     });
-    return 1234;
+    return ans;
   }
 
   Future<void> getNews() async {

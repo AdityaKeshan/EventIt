@@ -10,9 +10,12 @@ class MediaPage extends StatefulWidget {
 }
 
 class _MediaPageState extends State<MediaPage> {
+  List<String> URLS=[];
   @override
   Widget build(BuildContext context) {
-
+    setState(() {
+      URLS=Data.uRLS;
+    });
     return Scaffold(
       body: Stack(
         children: [
@@ -28,9 +31,9 @@ class _MediaPageState extends State<MediaPage> {
             padding: EdgeInsets.symmetric(horizontal: 5.0,vertical: 10.0),
             child: Container(
               height: MediaQuery. of(context). size. height,
-              child: ListView.builder(itemCount: Data.uRLS.length,itemBuilder: (BuildContext context,index)
+              child: ListView.builder(itemCount: URLS.length,itemBuilder: (BuildContext context,index)
               {
-                return Image.network(Data.uRLS[index]);
+                return Padding(padding:EdgeInsets.symmetric(horizontal: 10.0,vertical: 10.0),child: Image.network(URLS[index]));
               }),
             ),
           )

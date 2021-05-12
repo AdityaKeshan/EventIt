@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'data.dart';
 import 'event.dart';
 import 'guest.dart';
+import 'mediapage.dart';
 import 'styleguide.dart';
 
 class EventDetailsContent extends StatefulWidget {
@@ -34,9 +36,19 @@ class _EventDetailsContentState extends State<EventDetailsContent> {
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.2),
-            child: Text(
-              event.title,
-              style: eventWhiteTitleTextStyle,
+            child: GestureDetector(
+              onTap: () async
+              {
+                print("Tapped");
+                // await Data().urls(event.title).then((value) => {
+                //
+                // });
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>MediaPage()));
+              },
+              child: Text(
+                event.title,
+                style: eventWhiteTitleTextStyle,
+              ),
             ),
           ),
           SizedBox(

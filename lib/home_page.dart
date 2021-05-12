@@ -110,7 +110,8 @@ class _HomePageState extends State<HomePage> {
                         height: 500.0,
                         child: ListView.builder(itemCount:Data.userEvents.length,itemBuilder: (BuildContext context,index){
 
-                          return GestureDetector(onTap:(){
+                          return GestureDetector(onTap:()async {
+                            await Data().urls(Data.userEvents[index].title);
                             Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (context) =>
