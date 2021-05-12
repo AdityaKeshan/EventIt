@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'data.dart';
 import 'event.dart';
 import 'package:provider/provider.dart';
+
+import 'mediapage.dart';
 
 class EventDetailsBackground extends StatelessWidget {
   @override
@@ -13,18 +16,29 @@ class EventDetailsBackground extends StatelessWidget {
       alignment: Alignment.topCenter,
       child: ClipPath(
         clipper: ImageClipper(),
-        child: event.coverUrl==null?Image.asset(
-          "assets/event_images/music_concert.jpeg",
-          fit: BoxFit.cover,
-          width: screenWidth,
-          color: Color(0x99000000),
-          colorBlendMode: BlendMode.darken,
-          height: screenHeight * 0.5,
-        ):Image.network(event.coverUrl,fit: BoxFit.cover,
-          width: screenWidth,
-          color: Color(0x99000000),
-          colorBlendMode: BlendMode.darken,
-          height: screenHeight * 0.5,),
+        child: GestureDetector(
+          onTap: ()async
+          {
+            await Data().urls(event.title).then((value) => {
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>MediaPage()))
+            });
+
+            // TODO: ADD Media Page where all images will be displayed
+
+          },
+          child: event.coverUrl==null?Image.asset(
+            "assets/event_images/music_concert.jpeg",
+            fit: BoxFit.cover,
+            width: screenWidth,
+            color: Color(0x99000000),
+            colorBlendMode: BlendMode.darken,
+            height: screenHeight * 0.5,
+          ):Image.network(event.coverUrl,fit: BoxFit.cover,
+            width: screenWidth,
+            color: Color(0x99000000),
+            colorBlendMode: BlendMode.darken,
+            height: screenHeight * 0.5,),
+        ),
       ),
     );
   }

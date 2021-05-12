@@ -9,6 +9,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'dart:math';
+import 'event.dart' as e;
 import 'package:image_picker/image_picker.dart';
 
 import 'package:firebase_storage/firebase_storage.dart';
@@ -372,7 +373,7 @@ class _CreateEventState extends State<CreateEvent> {
                       try {
                         await storage.ref("images/$eventID/cover.png").putFile(_image);
                         String coverLink=await storage.ref("images/$eventID/cover.png").getDownloadURL();
-                        Map<String, String> val = {
+                        Map<String, String> k= {
                           'title': title,
                           'description': description,
                           'date': date,
@@ -383,13 +384,19 @@ class _CreateEventState extends State<CreateEvent> {
                           'rating': "4.5",
                           'coverUrl':coverLink
                         };
-                        database.reference().child("Events/$eventID").set(val);
+                        database.reference().child("Events/$eventID").set(k);
                         Fluttertoast.showToast(msg: "Event Creation successful");
+                        setState(() {
+                          Data.adminEvents.add(new e.Event(coverUrl:k['coverUrl'],title: k['title'],description: k['description'],date: k['date'],fees: k['fees'],rating: k['rating'],duration: k['time'],
+                              comments: k['comments']));
+                          Data.adminData.events=Data.adminData.events+","+eventID.toString();
+                        });
+
                       } on FirebaseException catch (e) {
 // e.g, e.code == 'canceled'
                         print("Error");
                       }
-                      Navigator.pop(context);
+
                     } catch (e) {}
                   } else {
                     Fluttertoast.showToast(msg: "Invalid Event Details");

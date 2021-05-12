@@ -152,6 +152,10 @@ class _ProfileAdminState extends State<ProfileAdmin> {
               children: [
                 GestureDetector(
                   onTap:() async {
+                    Data.adminData=null;
+                    Data.adminEvents.clear();
+                    Data.isAdmin=false;
+                    Data.adminNo=0;
                     Fluttertoast.showToast(msg: "Signed Out");
                     firebaseAuthentication.signOut();
 

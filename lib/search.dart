@@ -130,7 +130,7 @@ class _SearchPageState extends State<SearchPage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: Container(
-                      height: 500.0,
+                      height: 600.0,
                       child: ListView.builder(
                           itemCount: ev.length,
                           itemBuilder: (BuildContext context, index) {

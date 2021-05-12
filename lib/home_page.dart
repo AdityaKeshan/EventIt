@@ -49,6 +49,9 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    setState(() {
+       Data().getEvents();
+    });
     return Scaffold(
       body: ChangeNotifierProvider<AppState>(
         create: (_) => AppState(),

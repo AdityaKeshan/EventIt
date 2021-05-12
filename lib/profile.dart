@@ -48,7 +48,7 @@ class _ProfileState extends State<Profile> {
     return GestureDetector(
       onTap: ()
       {
-        Navigator.push(context, MaterialPageRoute(builder: (context)=> Review(title: a[i],)));
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> Review(title: Data.events[i],)));
       },
       child: Container(
         decoration: BoxDecoration(

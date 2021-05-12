@@ -227,7 +227,7 @@ class _ReviewState extends State<Review> {
                           c['rating'] = d;
                           if(!(comment =="")) {
                             c['comments'] =
-                                c['comments'] + " " + comment + " | ";
+                                c['comments'] + " | " + comment ;
                           }
                           b.set(m1);
                           m1[a] = c;

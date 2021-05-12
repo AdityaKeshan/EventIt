@@ -50,6 +50,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "eventify",
+      "rootUri": "file:///C:/Users/suman/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/eventify-0.1.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "fake_async",
       "rootUri": "file:///C:/Users/suman/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0",
       "packageUri": "lib/",
@@ -320,6 +326,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "razorpay_flutter",
+      "rootUri": "file:///C:/Users/suman/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/razorpay_flutter-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
       "name": "shared_preferences",
       "rootUri": "file:///C:/Users/suman/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-2.0.5",
       "packageUri": "lib/",
@@ -428,7 +440,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-05-10T21:13:55.583164Z",
+  "generated": "2021-05-12T07:50:28.738032Z",
   "generator": "pub",
   "generatorVersion": "2.12.3"
 }

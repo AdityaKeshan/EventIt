@@ -1,8 +1,10 @@
 import 'package:eventit/adminprofile.dart';
 import 'package:eventit/create_event.dart';
 import 'package:eventit/homepageadmin.dart';
+import 'package:eventit/mediapage.dart';
 import 'package:eventit/news.dart';
 import 'package:eventit/newsAdmin.dart';
+import 'package:eventit/paymentsuccess.dart';
 import 'package:eventit/review.dart';
 import 'package:eventit/search.dart';
 import 'package:eventit/signin.dart';
@@ -34,6 +36,7 @@ class MyApp extends StatelessWidget {
         '/homeadmin':(context)=>HomePageAdmin(),
         '/newsadmin':(context)=>NewsPageAdmin(),
         '/profileAdmin':(context)=>ProfileAdmin(),
+        '/paymentsuccess':(context)=>PaymentSucess(),
       },
       debugShowCheckedModeBanner: false,
     ) ;

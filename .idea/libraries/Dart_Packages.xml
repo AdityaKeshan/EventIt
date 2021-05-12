@@ -58,6 +58,13 @@
             </list>
           </value>
         </entry>
+        <entry key="eventify">
+          <value>
+            <list>
+              <option value="$USER_HOME$/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/eventify-0.1.6/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="fake_async">
           <value>
             <list>
@@ -373,6 +380,13 @@
             </list>
           </value>
         </entry>
+        <entry key="razorpay_flutter">
+          <value>
+            <list>
+              <option value="$USER_HOME$/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/razorpay_flutter-1.1.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="shared_preferences">
           <value>
             <list>
@@ -503,6 +517,7 @@
       <root url="file://$USER_HOME$/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/clock-1.1.0/lib" />
       <root url="file://$USER_HOME$/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.15.0/lib" />
       <root url="file://$USER_HOME$/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.2/lib" />
+      <root url="file://$USER_HOME$/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/eventify-0.1.6/lib" />
       <root url="file://$USER_HOME$/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0/lib" />
       <root url="file://$USER_HOME$/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/ffi-1.0.0/lib" />
       <root url="file://$USER_HOME$/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/file-6.1.0/lib" />
@@ -545,6 +560,7 @@
       <root url="file://$USER_HOME$/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/process-4.2.1/lib" />
       <root url="file://$USER_HOME$/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/provider-5.0.0/lib" />
       <root url="file://$USER_HOME$/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/quiver-3.0.1/lib" />
+      <root url="file://$USER_HOME$/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/razorpay_flutter-1.1.0/lib" />
       <root url="file://$USER_HOME$/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-2.0.5/lib" />
       <root url="file://$USER_HOME$/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_linux-2.0.0/lib" />
       <root url="file://$USER_HOME$/Documents/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-2.0.0/lib" />
